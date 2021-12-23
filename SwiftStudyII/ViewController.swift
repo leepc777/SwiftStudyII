@@ -42,9 +42,9 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate,UITableViewDataSource {
     
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 1
-//    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("dataSourceTemp:\(dataSourceTemp.count)")
@@ -56,23 +56,6 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
         print("===> cellForRowsAt indexPath:\(indexPath)")
         
         
-        //        // only show the last row
-        //                tableCell.detailTextLabel?.text = "This is a test"
-        //                tableCell.textLabel?.text = dataSourceTemp[indexPath.row]
-        //                return tableCell
-        
-        //        let cell = tableCell
-        //        cell.detailTextLabel?.text = "This is a test"
-        //        cell.textLabel?.text = dataSourceTemp[indexPath.row]
-        //        return cell
-        
-        
-        //        // only show textLabel, detail didn't show
-        ////        let cell = tableView.dequeueReusableCell(withIdentifier: "aCell")!
-        //        let cell = tableView.dequeueReusableCell(withIdentifier: "aCell", for: indexPath)
-        //        cell.detailTextLabel?.text = "This is a test"
-        //        cell.textLabel?.text = dataSourceTemp[indexPath.row]
-        //        return cell
         
         // 1. this works. No need to regist any cell. But this doesn'thave dequeue and reuse cell
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "myTableCell")
