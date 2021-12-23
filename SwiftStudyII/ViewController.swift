@@ -13,7 +13,6 @@ class ViewController: UIViewController {
 //    var tableCell = UITableViewCell()
 //    let tableCell = UITableViewCell(style: .subtitle, reuseIdentifier: "aCell")
     var dataSourceTemp = ["a","b","c","d","e","f","g","h","i"]
-//    var dataSourceTemp = ["a"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
